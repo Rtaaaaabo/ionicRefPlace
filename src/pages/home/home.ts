@@ -11,4 +11,24 @@ export class HomePage {
 
   }
 
+  rangeChange() {
+    // ここではPopOverを入れるつもり
+    console.log("Change Range");
+  }
+  
+  // Google Map APIを使用してMapを表示させるか
+  // それともApple Mapかな！？
+  displayMap() {
+    // ページ遷移をする
+    console.log("Google Mapを表示させる");
+  }
+
+  sendLike() {
+    console.log("いいね！ボタンのクリック");
+  }
+
+  sendComment() {
+    console.log("コメントを送る");
+  }
+
 }

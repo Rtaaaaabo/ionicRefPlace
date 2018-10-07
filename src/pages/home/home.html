@@ -1,6 +1,11 @@
 <ion-header>
   <ion-navbar>
     <ion-title>COLECTA</ion-title>
+    <ion-buttons end>
+      <button ion-button rount (click)="rangeChange()">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
   <ion-card ion-item ion-fixed>
     どこどこ付近です！
@@ -13,19 +18,19 @@
     <div style="position:relative">
       <img src="../../assets/imgs/IMG_1370.JPG" />
       <ion-fab right top>
-        <button ion-fab>
+        <button ion-fab (click)="displayMap()">
           <ion-icon name="map"></ion-icon>
         </button>
       </ion-fab>
     </div>
     <ion-row justify-content-start>
-      <ion-col col-3>
-        <button ion-button icon-start clear small>
+      <ion-col col-1>
+        <button ion-button icon-start clear small (click)="sendLike()">
           <ion-icon name="ios-heart"></ion-icon>
         </button>
       </ion-col>
       <ion-col col-3>
-        <button ion-button icon-start clear small>
+        <button ion-button icon-start clear small (click)="sendComment()">
           <ion-icon name="text"></ion-icon>
           <div>0 Comments</div>
         </button>
