@@ -15,11 +15,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class EditPage {
 
+  myPhoto : any;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad EditPage');
+  ionViewDidEnter() {
+    this.myPhoto = this.navParams.get('myPhoto');
   }
 
 }

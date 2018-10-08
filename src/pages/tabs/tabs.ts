@@ -13,6 +13,7 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
 })
 export class TabsPage {
   myPhoto : any;
+  encPhoto : any;
 
   options: CameraOptions = {
     quality: 100,
@@ -30,12 +31,18 @@ export class TabsPage {
 
   }
 
-  navigateCamera() { 
+  takePhoto() {
     this.camera.getPicture(this.options).then((imageData) => {
       this.myPhoto = 'data:image/jpeg;base64,' + imageData;
+      this.navigeteEditPage(this.myPhoto);
     }, (err) => {
       console.log("カメラが立ち上がりません！");
     });
-    this.navCtrl.push(EditPage);
+  }
+  
+  navigeteEditPage(photo) {
+    this.navCtrl.push(EditPage, {
+      myPhoto: photo
+    });
   }
 }
