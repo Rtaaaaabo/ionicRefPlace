@@ -7,6 +7,7 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { EditPageModule } from '../pages/edit/edit.module';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -23,6 +24,7 @@ import { Camera } from '@ionic-native/camera';
   ],
   imports: [
     BrowserModule,
+    EditPageModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
