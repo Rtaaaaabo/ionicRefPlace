@@ -1,14 +1,36 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>投稿画面</ion-title>
+    <ion-title>新規投稿</ion-title>
   </ion-navbar>
 
 </ion-header>
 
-
 <ion-content padding>
-  <div align="center" *ngIf="myPhoto">
-    <img src="{{myPhoto}}" />
-  </div>
+  <ion-item class="editIonItem">
+    <ion-thumbnail item-start>
+      <img src="{{myPhoto}}" />
+    </ion-thumbnail>
+    <textarea class="editTextArea" placeholder="キャプションを書く" rows="3"></textarea>
+  </ion-item>
+  <ion-list>
+    <button ion-item>
+      位置情報 / 修正
+    </button>
+  </ion-list>
+  <ion-list noline>
+    <ion-list-header>SNS</ion-list-header>
+    <ion-item>
+      <ion-label>Instagram</ion-label>
+      <ion-toggle checked="false"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Facebook</ion-label>
+      <ion-toggle checked="false"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Twitter</ion-label>
+      <ion-toggle checked="false"></ion-toggle>
+    </ion-item>
+  </ion-list>
 </ion-content>

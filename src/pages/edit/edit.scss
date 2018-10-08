@@ -1,3 +1,15 @@
-page-edit {
+textarea.editTextArea {
+    width: 278px;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+}
 
+ion-label.label.label-ios {
+    margin: 2px 8px 2px 0;
+}
+
+ion-item.editIonItem.item.item-block.item-ios {
+    padding-left: 5px;
 }
