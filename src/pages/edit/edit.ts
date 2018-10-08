@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the EditPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { Camera, CameraOptions } from '@ionic-native/camera';
 
 @IonicPage()
 @Component({
@@ -16,12 +11,31 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class EditPage {
 
   myPhoto : any;
+  options : CameraOptions = {
+    quality :50,
+    destinationType: this.camera.DestinationType.DATA_URL,
+    encodingType : this.camera.EncodingType.JPEG,
+    mediaType : this.camera.MediaType.PICTURE
+  }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    private camera: Camera,
+    public navCtrl: NavController,
+    public navParams: NavParams,
+  )
+  {
+  }
+
+  ngOnInit(){
+    this.camera.getPicture(this.options).then((imageData) => {
+      this.myPhoto = 'data:image/jpeg;base64,' + imageData;
+    }, (err) => {
+      console.log("エラー:", err);
+    });
   }
 
   ionViewDidEnter() {
-    this.myPhoto = this.navParams.get('myPhoto');
+    console.log("ここには入ってこない？");
   }
 
 }
