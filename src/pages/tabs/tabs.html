@@ -1,5 +1,14 @@
+
 <ion-tabs>
+  <ion-grid>
   <ion-tab [root]="tab1Root" tabIcon="navigate"></ion-tab>
-  <ion-tab [root]="tab2Root" tabIcon="ios-add-circle"></ion-tab>
+<!--  <ion-tab [root]="tab2Root" tabIcon="ios-add-circle"></ion-tab> -->
   <ion-tab [root]="tab3Root" tabIcon="person"></ion-tab>
+  </ion-grid>
 </ion-tabs>
+
+<ion-fab center bottom>
+  <button ion-fab (click)="navigateCamera()">
+    <ion-icon name="add"></ion-icon>
+  </button>
+</ion-fab>

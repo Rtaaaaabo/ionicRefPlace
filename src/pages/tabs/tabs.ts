@@ -16,4 +16,7 @@ export class TabsPage {
   constructor() {
 
   }
+  navigateCamera() {
+    console.log("TEST!");
+  }
 }
