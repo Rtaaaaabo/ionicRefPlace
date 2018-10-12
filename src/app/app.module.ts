@@ -7,7 +7,9 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+//import { PopOverPage } from '../pages/pop-over/pop-over'
 import { EditPageModule } from '../pages/edit/edit.module';
+import { PopOverPageModule } from '../pages/pop-over/pop-over.module';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -20,11 +22,13 @@ import { Camera } from '@ionic-native/camera';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    //PopOverPage,
   ],
   imports: [
     BrowserModule,
     EditPageModule,
+    PopOverPageModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
